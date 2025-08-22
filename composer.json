@@ -1,0 +1,18 @@
+{
+    "name": "struktal/struktal-translator",
+    "description": "PHP library for translating texts in Struktal applications",
+    "keywords": [
+        "translator"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload":{
+        "psr-4": {
+            "struktal\\Translator\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.2.0",
+        "ext-apcu": "*"
+    }
+}
