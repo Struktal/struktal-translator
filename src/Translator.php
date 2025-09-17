@@ -36,7 +36,7 @@ class Translator {
         }
     }
 
-    public static function translate(string $message, array $variables = []): string {
+    public function translate(string $message, array $variables = []): string {
         if(!apcu_exists(self::$locale . "-" . self::$domain)) {
             // Read translations from file
             if(self::$translationFile && is_resource(self::$translationFile)) {
@@ -89,7 +89,7 @@ class Translator {
         return $message;
     }
 
-    public static function getLocaleForHtmlLang(): string {
+    public function getLocaleForHtmlLang(): string {
         return str_replace("_", "-", self::$locale);
     }
 
